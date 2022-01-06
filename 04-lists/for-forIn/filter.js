@@ -13,7 +13,7 @@ const { obterPessoas } = require('./service')
     consolo.log(nome, nome)
 */
 
-Array.prototype.meuFilter = function (callback){
+Array.prototype.meuFilter = function(callback){
     const lista = []
     for(index in this){
         const item = this[index]
