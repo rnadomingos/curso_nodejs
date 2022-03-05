@@ -38,3 +38,19 @@ docker run \
 docker exec -ti mongodb \
     mongo --host localhost -u admin -p senhaadmin --authenticationDatabase admin \
     --eval "db.getSiblingDB('herois').createUser({user: 'renan', pwd: 'minhasenhasecreta', roles:[{role: 'readWrite', db: 'herois'}]})"
+
+
+
+# Commands Manager Heroku    
+
+ sudo npm i -g heroku
+ heroku login
+ heroku apps:list
+ heroku apps:create cursonodebr
+ heroku git:remote --app cursonodebr
+ heroku apps:list
+ heroku apps:create cursonodebr-renan
+ heroku apps:list
+ heroku git:remote --app cursonodebr-renan
+ git push heroku master
+ heroku logs
